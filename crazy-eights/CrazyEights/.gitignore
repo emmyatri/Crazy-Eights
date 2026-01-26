@@ -1,5 +1,6 @@
 ﻿# IDE
 .idea/
+*.sln.DotSettings.user
 .vs/
 *.user
 

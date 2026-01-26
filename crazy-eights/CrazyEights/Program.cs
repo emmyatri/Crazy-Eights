@@ -1,3 +1,18 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using CrazyEights.Game;
 
-Console.WriteLine("Hello, World!");
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+
+UserInterface.Welcome();
+var name = UserInterface.GetPlayerName();
+
+do
+{
+    var game = new CrazyEightsGame(name);
+    game.Start();
+} while (UserInterface.PlayAgain());
+
+UserInterface.Goodbye();
+
+
+

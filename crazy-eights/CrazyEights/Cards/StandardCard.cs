@@ -7,26 +7,23 @@ namespace CrazyEights.Cards;
 
 public class StandardCard : ICard
 {
+    public Suit Suit { get; }
     
-    public Rank Rank { get; set; }
+    public Rank Rank { get; }
 
-    public Suit Suit {  get; set; }
-    
-    
-
-    /// <summary>
-    /// Create new card with specified rank and suit
-    /// </summary>
-    /// <param name="rank">Card rank</param>
-    /// <param name="suit">Card suit</param>
-    
     public StandardCard(Rank rank, Suit suit)
     {
-        
+
         Rank = rank;
         
         Suit = suit;
+
+    }
+
+    public override string ToString()
+    {
+        
+        return $"{Rank} of {Suit}{Suit.SuitSymbol()}";
         
     }
-    
 }

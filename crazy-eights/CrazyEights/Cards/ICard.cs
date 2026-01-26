@@ -8,8 +8,9 @@ namespace CrazyEights.Cards;
 
 public interface ICard
 {
-    Suit Suit { get; set; }
     
-    Rank Rank { get; set; }
+    Suit Suit { get; }
+    
+    Rank Rank { get; }
     
 }

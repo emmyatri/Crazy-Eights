@@ -1,0 +1,15 @@
+﻿# IDE
+.idea/
+*.sln.DotSettings.user
+.vs/
+*.user
+
+# Build
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+
+# OS
+.DS_Store
+Thumbs.db

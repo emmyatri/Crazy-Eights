@@ -20,12 +20,12 @@ Crazy Eights is a two-player card game where the goal is to be the first player 
 
 | Concept              | Implementation                                               |
 | -------------------- | ------------------------------------------------------------ |
-| **Interfaces**       | `ICard` defines the contract for cards; `IPlayer` defines the contract for players |
-| **Abstract Classes** | `PlayerBase` encapsulates shared player logic (hand management, finding playable cards) |
-| **Concrete Classes** | `StandardCard`, `HumanPlayer`, `CpuPlayer`, `Deck`, `DiscardPile`, `CrazyEightsGame` |
-| **Polymorphism**     | Players stored as `List<IPlayer>`; game engine calls `TakeTurn()` without knowing player type |
-| **Dynamic Dispatch** | `currentPlayer.TakeTurn(context)` resolves to correct implementation at runtime |
-| **Encapsulation**    | Private hands, deck, and discard pile; state modified only through methods |
+| **Interfaces**       | `ICard` and `IPlayer` define what cards and players can do. |
+| **Abstract Classes** | `PlayerBase` handles managing hands and finding playable cards so `HumanPlayer` and `CpuPlayer` can focus on decision making |
+| **Concrete Classes** | `StandardCard`, `HumanPlayer`, `CpuPlayer`, `Deck`, `DiscardPile`, `CrazyEightsGame` - actual implementation |
+| **Polymorphism**     | Players lives in a `List<IPlayer>`. The game does not care if you're human or CPU |
+| **Dynamic Dispatch** | `currentPlayer.TakeTurn(context)` figures out the right behavior at runtime |
+| **Encapsulation**    | Hands, deck, and discard pile are private. You can't cheat by reaching in directly |
 
 
 
@@ -62,3 +62,7 @@ docker run -it crazy-eights
 ## Author
 
 Amelia Ellingson - KSU SWE 4743: Object-Oriented Design
+
+##AI Acknowledgements
+
+Claude Opus 4.5 assisted with writing out the Rules and Game Description of Crazy Eights, and gave suggestions for demonstrating OO Concepts. 

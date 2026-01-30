@@ -66,7 +66,10 @@ public class GameSession
             {
                 if (!humanWon)
                     Console.WriteLine("\nSore loser...");
+                if (humanWon)
+                    DisplayGoodbye();
                 return false;
+                
             }
 
             Console.WriteLine("\nInvalid input. Enter Y or N\n");

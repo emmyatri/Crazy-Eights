@@ -63,6 +63,6 @@ docker run -it crazy-eights
 
 Amelia Ellingson - KSU SWE 4743: Object-Oriented Design
 
-##AI Acknowledgements
+## AI Acknowledgements
 
 Claude Opus 4.5 assisted with writing out the Rules and Game Description of Crazy Eights, and gave suggestions for demonstrating OO Concepts. 
